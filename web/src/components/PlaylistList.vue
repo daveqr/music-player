@@ -1,12 +1,7 @@
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps } from 'vue';
 
 const props = defineProps(['playlists']);
-const emit = defineEmits(['selectPlaylist']);
-
-const selectPlaylist = (playlist) => {
-    emit('selectPlaylist', playlist);
-};
 </script>
   
 <template>
@@ -14,7 +9,7 @@ const selectPlaylist = (playlist) => {
         <h2>Playlists</h2>
         <ul class="playlist-list">
             <li class="playlist-item" v-for="playlist in props.playlists" :key="playlist.id"
-                @click="selectPlaylist(playlist)">
+                @click="$emit('selectPlaylist', playlist)">
                 {{ playlist.name }}
             </li>
         </ul>

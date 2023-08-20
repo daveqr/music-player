@@ -42,7 +42,6 @@ const playTrack = (track) => {
         audioPlayer.value.stop();
     }
 
-    console.log(track.url);
     audioPlayer.value = new Howl({
         src: [track.url],
         html5: true,
