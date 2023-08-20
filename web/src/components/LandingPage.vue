@@ -12,14 +12,8 @@
                 </div>
 
                 <!-- song list -->
-                <div class="song-list-section" v-if="selectedPlaylist">
-                    <h2>{{ selectedPlaylist.name }} Songs</h2>
-                    <ul>
-                        <li v-for="song in selectedPlaylist.songs" :key="song.id" @click="playSong(song)">
-                            {{ song.title }} by {{ song.artist }}
-                        </li>
-                    </ul>
-                </div>
+                <song-list v-if="selectedPlaylist" :songs="selectedPlaylist.songs" :playlistName="selectedPlaylist.name"
+                    @playSong="playSong"></song-list>
 
                 <!-- audio player -->
                 <div class="audio-player" v-if="selectedSong">
@@ -49,6 +43,7 @@
 <script>
 import PlaylistList from "@/views/PlaylistList.vue";
 import Playlist from "@/models/Playlist";
+import SongList from "@/views/SongList.vue";
 import Song from "@/models/Song";
 import { Howl } from 'howler';
 
@@ -59,6 +54,7 @@ export default {
     },
     components: {
         PlaylistList,
+        SongList
     },
     data() {
         return {
@@ -106,7 +102,6 @@ export default {
         },
 
         playSong(song) {
-            console.log("playing song")
             if (this.audioPlayer) {
                 this.audioPlayer.stop();
             }
