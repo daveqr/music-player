@@ -29,8 +29,8 @@
   
 <script>
 import PlaylistList from "@/views/PlaylistList.vue";
-import Playlist from "@/models/playlist";
-import Song from "@/models/song";
+import Playlist from "@/models/Playlist";
+import Song from "@/models/Song";
 
 export default {
     name: "LandingPage",
@@ -84,4 +84,4 @@ export default {
     },
 };
 </script>
-  
+  @/models/Playlist@/models/Song
