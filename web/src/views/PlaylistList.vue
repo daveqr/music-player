@@ -18,6 +18,10 @@ export default {
         selectPlaylist(playlist) {
             this.$emit("selectPlaylist", playlist);
         },
+
+        selectSong(song) {
+            this.$emit("selectSong", song);
+        },
     },
 };
 </script>
