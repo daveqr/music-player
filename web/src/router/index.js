@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LandingPage from '@/components/LandingPage.vue';
-import PlaylistList from '@/views/PlaylistList.vue';
-import SongList from '@/views/SongList.vue';
+import PlaylistList from '@/components/PlaylistList.vue';
+import SongList from '@/components/SongList.vue';
 
 const routes = [
   {

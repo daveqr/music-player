@@ -41,9 +41,9 @@
 </template>
   
 <script>
-import PlaylistList from "@/views/PlaylistList.vue";
+import PlaylistList from "@/components/PlaylistList.vue";
+import SongList from "@/components/SongList.vue";
 import Playlist from "@/models/Playlist";
-import SongList from "@/views/SongList.vue";
 import Song from "@/models/Song";
 import { Howl } from 'howler';
 
@@ -52,10 +52,12 @@ export default {
     props: {
         msg: String,
     },
+
     components: {
         PlaylistList,
         SongList
     },
+
     data() {
         return {
             playlists: [],
@@ -64,9 +66,11 @@ export default {
             audioPlayer: null,
         };
     },
+
     created() {
         this.fetchPlaylists();
     },
+
     methods: {
         async fetchPlaylists() {
             try {

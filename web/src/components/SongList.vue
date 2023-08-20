@@ -15,6 +15,7 @@ export default {
         songs: Array,
         playlistName: String
     },
+    
     methods: {
         playSong(song) {
             this.$emit("playSong", song);

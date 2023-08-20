@@ -14,6 +14,7 @@ export default {
     props: {
         playlists: Array,
     },
+    
     methods: {
         selectPlaylist(playlist) {
             this.$emit("selectPlaylist", playlist);
