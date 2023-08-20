@@ -21,7 +21,7 @@ const fetchPlaylists = async () => {
 
         playlists.value = playlistsData.map((playlist) => {
             const tracks = playlist.tracks.map((trackData) =>
-                new Track(trackData.id, trackData.title, trackData.artist, "http://localhost:8000/mp3/Shane.mp3")
+                new Track(trackData.id, trackData.title, trackData.artist, trackData.url)
             );
 
             return new Playlist(playlist.id, playlist.name, playlist.description, tracks);
