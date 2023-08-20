@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LandingPage from '@/components/LandingPage.vue';
 import PlaylistList from '@/components/PlaylistList.vue';
-import SongList from '@/components/SongList.vue';
+import TrackList from '@/components/TrackList.vue';
 
 const routes = [
   {
@@ -16,8 +16,8 @@ const routes = [
   },
   {
     path: '/playlist/:id',
-    name: 'SongList',
-    component: SongList,
+    name: 'TrackList',
+    component: TrackList,
     props: true,
   },
 ];

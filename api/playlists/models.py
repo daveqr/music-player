@@ -1,6 +1,6 @@
 from django.db import models
 
-class Song(models.Model):
+class Track(models.Model):
     title = models.CharField(max_length=255)
     artist = models.CharField(max_length=255)
 
@@ -10,7 +10,7 @@ class Song(models.Model):
 class Playlist(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    songs = models.ManyToManyField(Song, related_name='playlists')
+    tracks = models.ManyToManyField(Track, related_name='playlists')
 
     def __str__(self):
         return self.name

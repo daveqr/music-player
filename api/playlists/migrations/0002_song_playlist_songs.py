@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='playlist',
-            name='songs',
+            name='tracks',
             field=models.ManyToManyField(related_name='playlists', to='playlists.song'),
         ),
     ]
