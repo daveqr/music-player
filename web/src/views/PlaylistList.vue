@@ -1,29 +1,24 @@
 <template>
     <div>
-      <h2>Playlists</h2>
-      <ul class="playlist-list">
-        <li
-          class="playlist-item"
-          v-for="playlist in playlists"
-          :key="playlist.id"
-          @click="selectPlaylist(playlist)"
-        >
-          {{ playlist.name }}
-        </li>
-      </ul>
+        <h2>Playlists</h2>
+        <ul class="playlist-list">
+            <li class="playlist-item" v-for="playlist in playlists" :key="playlist.id" @click="selectPlaylist(playlist)">
+                {{ playlist.name }}
+            </li>
+        </ul>
     </div>
-  </template>
+</template>
   
-  <script>
-  export default {
+<script>
+export default {
     props: {
-      playlists: Array,
+        playlists: Array,
     },
     methods: {
-      selectPlaylist(playlist) {
-        this.$emit("selectPlaylist", playlist);
-      },
+        selectPlaylist(playlist) {
+            this.$emit("selectPlaylist", playlist);
+        },
     },
-  };
-  </script>
+};
+</script>
   
