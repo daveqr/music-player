@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import get_playlists
+from .views import PlaylistView
 
 urlpatterns = [
-    path('', get_playlists, name='get-playlists'),
+    path('', PlaylistView.as_view({'get': 'retrieve'}))
 ]

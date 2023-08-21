@@ -19,7 +19,7 @@ const routes = [
     name: 'TrackList',
     component: TrackList,
     props: true,
-  },
+  }
 ];
 
 const router = createRouter({
