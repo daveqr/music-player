@@ -23,7 +23,7 @@ def get_playlists(request):
     mysteriousPl = Playlist.objects.create(
         name="Mysterious", description="Mysterious tracks")
     romanticPl = Playlist.objects.create(
-        name="Romantic", description="Romantics tracks")
+        name="Romantic", description="Romantic tracks")
 
     cinematicPl.tracks.add(track1, track2)
     mysteriousPl.tracks.add(track3, track4)
