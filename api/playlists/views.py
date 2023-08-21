@@ -5,27 +5,29 @@ from .serializers import PlaylistSerializer
 
 def get_playlists(request):
     track1 = Track.objects.create(
-        artist="Elvis", title="Never Been to Spain", url="http://localhost:8000/mp3/Elvis.mp3")
+        artist="StudioKolomna", title="Risk", url="http://localhost:8000/mp3/StudioKolomna_risk.mp3")
     track2 = Track.objects.create(
-        artist="MTTV", title="Shane", url="http://localhost:8000/mp3/Shane.mp3")
+        artist="Lexin Music", title="Inspiring Cinematic Ambient", url="http://localhost:8000/mp3/lexin_inspiring-cinematic-ambient.mp3")
     track3 = Track.objects.create(
-        artist="Paul Shortino", title="Love of My Life", url="http://localhost:8000/mp3/Shortino.mp3")
+        artist="Universefield", title="Creepy Piano", url="http://localhost:8000/mp3/UNIVERSFIELD_creepy-piano.mp3")
     track4 = Track.objects.create(
-        artist="James Whild Lea", title="Big Family", url="http://localhost:8000/mp3/Big Family.mp3")
+        artist="Keyfram Audio", title="Now This", url="http://localhost:8000/mp3/now-this-Keyframe_Audio.mp3")
     track5 = Track.objects.create(
-        artist="James Whild Lea", title="The Smile Of Elvis", url="http://localhost:8000/mp3/The Smile Of Elvis.mp3")
+        artist="Fasssounds", title="Good Night", url="http://localhost:8000/mp3/fassoumds_good-night.mp3")
+    track56= Track.objects.create(
+        artist="Leva", title="Eternity", url="http://localhost:8000/mp3/leva_eternity.mp3")
 
-    singerPl = Playlist.objects.create(
-        name="Singers", description="Tracks from popular signers")
-    therapyPl = Playlist.objects.create(
-        name="Therapy", description="Tracks from the album Therapy")
-    rockPl = Playlist.objects.create(name="Rock", description="Best of rock")
+    cinematicPl = Playlist.objects.create(
+        name="Cinematic", description="Cinematic tracks")
+    mysteriousPl = Playlist.objects.create(
+        name="Therapy", description="Mysterious tracks")
+    romanticPl = Playlist.objects.create(name="Rock", description="Romantics tracks")
 
-    singerPl.tracks.add(track1, track3)
-    therapyPl.tracks.add(track4, track5)
-    rockPl.tracks.add(track2, track1)
+    cinematicPl.tracks.add(track1, track2)
+    mysteriousPl.tracks.add(track3, track4)
+    romanticPl.tracks.add(track5, track56)
 
-    playlists = [singerPl, therapyPl, rockPl]
+    playlists = [cinematicPl, mysteriousPl, romanticPl]
     serializer = PlaylistSerializer(playlists, many=True)
 
     return JsonResponse(serializer.data, safe=False)
