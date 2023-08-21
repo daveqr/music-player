@@ -6,17 +6,17 @@ from django.conf import settings
 
 def get_playlists(request):
     track1 = Track.objects.create(
-        artist="Neon Octopus", title="Electric Tentacles", url=f"{settings.BASE_URL}/StudioKolomna_risk.mp3")
+        artist="Neon Octopus", title="Electric Tentacles", url=f"{settings.BASE_URL}/neon-octopus_electric-tentacles.mp3")
     track2 = Track.objects.create(
-        artist="Frozen Fire", title="Melting Dreams", url=f"{settings.BASE_URL}/lexin_inspiring-cinematic-ambient.mp3")
+        artist="Frozen Fire", title="Melting Dreams", url=f"{settings.BASE_URL}/frozen-fire_meltin-dreams.mp3")
     track3 = Track.objects.create(
-        artist="Shadowplay Ensemble", title="Whispering Shadows", url=f"{settings.BASE_URL}/UNIVERSFIELD_creepy-piano.mp3")
+        artist="Shadowplay Ensemble", title="Whispering Shadows", url=f"{settings.BASE_URL}/shadowplay-ensemble_whispering-shadows.mp3")
     track4 = Track.objects.create(
-        artist="Astrofunk Odyssey", title="Alien Funk Encounter", url=f"{settings.BASE_URL}/now-this-Keyframe_Audio.mp3")
+        artist="Astrofunk Odyssey", title="Alien Funk Encounter", url=f"{settings.BASE_URL}/astrofunk-odyssey_alien-funk-encounter.mp3")
     track5 = Track.objects.create(
-        artist="Velvet Thunderstruck", title="Good Night", url=f"{settings.BASE_URL}/fassounds_good-night.mp3")
+        artist="Velvet Thunderstruck", title="Good Night", url=f"{settings.BASE_URL}/velvet-thunderstruck_good-night.mp3")
     track56 = Track.objects.create(
-        artist="Galactic Groove Collective", title="Eternity", url=f"{settings.BASE_URL}/leva_eternity.mp3")
+        artist="Galactic Groove Collective", title="Eternity", url=f"{settings.BASE_URL}/galactic-groove-collective_eternity.mp3")
 
     cinematicPl = Playlist.objects.create(
         name="Cinematic", description="Cinematic tracks")
