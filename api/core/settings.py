@@ -130,7 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS settings. This would be restricted in a prod env.
 CORS_ALLOW_ALL_ORIGINS = True
 
-STATIC_URL = '/mp3/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "mp3"),
-]
+# using Nginx to serve static mp3s
+BASE_URL = 'http://localhost:9000'
