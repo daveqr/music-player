@@ -4,9 +4,9 @@ connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
 # Declare the exchange
-exchange_name = 'file_upload_exchange'
+exchange_name = 'music_player.upload.fanout'
 channel.exchange_declare(
-    exchange='file_upload_exchange', exchange_type='fanout')
+    exchange='music_player.upload.fanout', exchange_type='fanout')
 
 # Declare the processing queue and bind it to the exchange
 processing_queue_name = 'music_player.track.process'
