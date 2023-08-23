@@ -149,4 +149,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 # using Nginx to serve static mp3s
-BASE_URL = 'http://localhost:9000'
+BASE_URL = 'http://localhost:9000/music-player'

@@ -12,7 +12,7 @@ class PlaylistView(ViewSet):
         track1 = Track.objects.create(
             artist="Neon Octopus", title="Electric Tentacles", url=f"{settings.BASE_URL}/neon-octopus_electric-tentacles.mp3")
         track2 = Track.objects.create(
-            artist="Frozen Fire", title="Melting Dreams", url=f"{settings.BASE_URL}/frozen-fire_meltin-dreams.mp3")
+            artist="Frozen Fire", title="Melting Dreams", url=f"{settings.BASE_URL}/frozen-fire_melting-dreams.mp3")
         track3 = Track.objects.create(
             artist="Shadowplay Ensemble", title="Whispering Shadows", url=f"{settings.BASE_URL}/shadowplay-ensemble_whispering-shadows.mp3")
         track4 = Track.objects.create(
