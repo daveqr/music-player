@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'playlists',
-    'uploads',  
+    'uploads',
 ]
 
 SITE_ID = 1
@@ -150,3 +150,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 # using Nginx to serve static mp3s
 BASE_URL = 'http://localhost:9000/music-player'
+
+CELERY_BROKER_URL = 'amqp://localhost'
