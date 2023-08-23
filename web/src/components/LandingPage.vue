@@ -3,6 +3,7 @@ import PlaylistList from "@/components/PlaylistList.vue";
 import TrackList from "@/components/TrackList.vue";
 import Playlist from "@/models/Playlist";
 import FileUpload from "@/components/FileUpload";
+import RegistrationForm from "@/components/RegistrationForm";
 import Track from "@/models/Track";
 import { Howl } from 'howler';
 import { ref, onMounted, } from 'vue';
@@ -71,7 +72,10 @@ onMounted(fetchPlaylists);
         </header>
 
         <main>
+            <RegistrationForm />
+            <br/><Br/>
             <FileUpload />
+            <br/><Br/>
             <div class="two-panel-layout">
                 <!-- playlist -->
                 <div class="playlist-section">
